@@ -1,4 +1,4 @@
-# 通用约束文档库（insseek-constraints-docs）
+# 通用约束文档库（insseek-constraints）
 
 里探个人自定义的 Agent 约束，给编码 Agent 和人共用的规则库：项目以 git submodule 引入，Agent 按入口加载，人按人侧文档执行。
 
@@ -30,16 +30,16 @@
 不指定版本（固定到添加时 `main` 的提交）：
 
 ```bash
-git submodule add https://github.com/insseek/insseek-constraints-docs.git
-git add .gitmodules insseek-constraints-docs
+git submodule add https://github.com/insseek/insseek-constraints.git
+git add .gitmodules insseek-constraints
 ```
 
 指定版本（推荐，日后能确知用的是哪一版）：
 
 ```bash
-git submodule add https://github.com/insseek/insseek-constraints-docs.git
-git -C insseek-constraints-docs checkout v1.0
-git add .gitmodules insseek-constraints-docs
+git submodule add https://github.com/insseek/insseek-constraints.git
+git -C insseek-constraints checkout v1.0
+git add .gitmodules insseek-constraints
 ```
 
 两种方式都会把项目锁在具体提交上，之后母库更新不会自动跟。
@@ -47,10 +47,10 @@ git add .gitmodules insseek-constraints-docs
 项目根目录 `AGENTS.md` 写一行（没有就新建）：
 
 ```
-约束：insseek-constraints-docs/AGENTS.md
+约束：insseek-constraints/AGENTS.md
 ```
 
-Agent 按入口顺序加载；人读 [人使用编码 Agent 的协作约束](human-agent-collaboration-constraints.md)。升级只改它指向的提交：`git -C insseek-constraints-docs checkout v1.x` 后提交。不复制、不改 submodule 内文件。
+Agent 按入口顺序加载；人读 [人使用编码 Agent 的协作约束](human-agent-collaboration-constraints.md)。升级只改它指向的提交：`git -C insseek-constraints checkout v1.x` 后提交。不复制、不改 submodule 内文件。
 
 ## 维护
 
