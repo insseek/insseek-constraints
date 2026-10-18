@@ -10,30 +10,25 @@
 
 | 文档 | 性质 | 用途 |
 |---|---|---|
-| `coding-constraints.md` / `writer-constraints.md` / `life-good-and-antifragility-constraints.md` | 约束性（作者原文） | 代码、文字、道德基准；不改写 |
-| `human-agent-collaboration-constraints.md` | 约束性（人） | 人怎么用 Agent：三条红线、任务书、验收、安全 / 合规 |
-| `agent-collaboration-constraints.md` | 约束性（Agent 侧） | Agent 怎么执行：十行摘要、验证、上下文、安全治理 |
-| `dsh-agent-deltas.md` | 约束性（DSH 差异） | DSH 入口、机制、安全边界；通用规则见上 |
-| `agent-collaboration-constraints-project-custom-template.md` | 模板 | 项目自定义内容骨架；六章，结构可校验 |
-| `dsh-working-mechanism.md` | 说明性 | DSH 机制；某台机器的实测，不作规范 |
+| [coding-constraints.md](coding-constraints.md) / [writer-constraints.md](writer-constraints.md) / [life-good-and-antifragility-constraints.md](life-good-and-antifragility-constraints.md) | 约束性（作者原文） | 代码、文字、道德基准；不改写 |
+| [human-agent-collaboration-constraints.md](human-agent-collaboration-constraints.md) | 约束性（人） | 人怎么用 Agent：三条红线、任务书、验收、安全 / 合规 |
+| [agent-collaboration-constraints.md](agent-collaboration-constraints.md) | 约束性（Agent 侧） | Agent 怎么执行：十行摘要、验证、上下文、安全治理 |
+| [dsh-agent-deltas.md](dsh-agent-deltas.md) | 约束性（DSH 差异） | DSH 入口、机制、安全边界；通用规则见上 |
+| [agent-collaboration-constraints-project-custom-template.md](agent-collaboration-constraints-project-custom-template.md) | 模板 | 项目自定义内容骨架；六章，结构可校验 |
+| [dsh-working-mechanism.md](dsh-working-mechanism.md) | 说明性 | DSH 机制；某台机器的实测，不作规范 |
 
 ## 怎么读
 
-```
-人：human-agent-collaboration-constraints.md（最低限度三条；任务书 / 评审模板）
-Agent：agent-collaboration-constraints.md 的「十行摘要 + 安全三条」；
-       DSH 再读 dsh-agent-deltas.md
-项目：按模板填自己的《自定义内容》；机制问题查 dsh-working-mechanism.md
-```
+- **人**：[human-agent-collaboration-constraints.md](human-agent-collaboration-constraints.md)（最低限度三条；任务书 / 评审模板）
+- **Agent**：[agent-collaboration-constraints.md](agent-collaboration-constraints.md) 的「十行摘要 + 安全三条」；DSH 再读 [dsh-agent-deltas.md](dsh-agent-deltas.md)
+- **项目**：按[模板](agent-collaboration-constraints-project-custom-template.md)填《自定义内容》；机制问题查 [dsh-working-mechanism.md](dsh-working-mechanism.md)
 
 ## 在项目里使用
 
-```
-1. 复制整个目录到 <项目>/insseek-constraints-docs/。
-2. 按模板填 agent-collaboration-constraints-project-custom.md，六章结构不改。
+1. 复制整个目录到 `<项目>/insseek-constraints-docs/`。
+2. 按[模板](agent-collaboration-constraints-project-custom-template.md)填 `agent-collaboration-constraints-project-custom.md`，六章结构不改。
 3. 自检只校验章节结构；不校验正文，不要求与母版逐字一致。
 4. 在项目文档索引里登记。
-```
 
 **加载成本**：项目入口只放「十行摘要 + 安全三条」或人侧「最低限度」；全文按需查阅。
 
