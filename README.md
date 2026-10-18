@@ -1,6 +1,6 @@
 # 通用约束文档库（insseek-constraints-docs）
 
-> 与具体项目无关的约束、模板与机制说明。开新项目时整目录复制到项目根使用。
+> 与具体项目无关的约束、模板与机制说明。项目以 git submodule 引入本库，不复制。
 >
 > **目的**：降本增效、确保安全、提高工作质量；冲突时 安全 > 质量 > 成本。
 > **边界**：不依赖具体项目、机器、账户配置、preset 或插件；机制数字不手抄。
@@ -25,17 +25,26 @@
 
 ## 在项目里使用
 
-1. 复制整个目录到 `<项目>/insseek-constraints-docs/`。
-2. 按[项目自定义内容模板](agent-collaboration-constraints-project-custom-template.md)填 `agent-collaboration-constraints-project-custom.md`，六章结构不改。
-3. 自检只校验章节结构；不校验正文，不要求与母版逐字一致。
-4. 在项目文档索引里登记。
+本库只当一个只读依赖：新项目加 submodule 即可，不复制、不生成文件。
 
-**加载成本**：项目入口只放「十行摘要 + 安全三条」或人侧「最低限度」；全文按需查阅。
+```bash
+git submodule add https://github.com/insseek/insseek-constraints-docs.git \
+  constraints/insseek-constraints-docs
+git -C constraints/insseek-constraints-docs checkout v2.0   # 锁版本
+git add .gitmodules constraints/insseek-constraints-docs
+```
+
+- **锁版本**：submodule 指针就是版本；升级时 `git -C … checkout v2.x` 并提交指针。
+- **让 Agent 找到**：项目 `AGENTS.md` 里加一行路径，如「遵守 `constraints/insseek-constraints-docs/agent-collaboration-constraints.md`」，只放路径引用，不抄正文。
+- **项目自定义**：需要时在项目内写 `constraints/project-custom.md`，按[项目自定义内容模板](agent-collaboration-constraints-project-custom-template.md)六章结构；不写进 submodule。
+- **只读**：不在 submodule 内改文件；改动提交到本库，项目再更新指针。
+
+**加载成本**：项目入口只放路径；Agent 打开后先读「十行摘要 + 安全三条」或人侧「最低限度」，全文按需查阅。
 
 ## 维护
 
 ```
-· 本库是唯一来源；改这里，不自动同步项目副本。
+· 本库是唯一来源；项目用 submodule 指针引用，不产生副本。
 · 作者原文三份不改写。
 · 不写机器、账户、插件、版本、阈值等环境事实；必要时引用机制文档。
 · 命名：宿主相关加 dsh-，跨宿主不加。
