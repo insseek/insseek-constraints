@@ -9,7 +9,7 @@
 | 1 | [编码 Agent 高效低成本协作约束（Agent 侧）](agent-collaboration-constraints.md) | 通用执行约束；先读「十行摘要 + 安全三条」 |
 | 2 | [人使用编码 Agent 的协作约束](human-agent-collaboration-constraints.md) | 其中规定 Agent 行为的条款必须执行；规定人职责的条款不代人做决定 |
 | 3 | [代码规范](coding-constraints.md) | 写改代码时执行 |
-| 4 | [写作与审核原则](writer-constraints.md) | 写文字、注释、提交信息、评审意见时执行 |
+| 4 | [写作与审核原则](writer-constraints.md) | 写给人读的文字（文档、注释、提交信息、评审意见）时执行 |
 | 5 | [道德规范](life-good-and-antifragility-constraints.md) | 底线；任何情况下不破 |
 | 6 | [DSH Agent 侧差异补充](dsh-agent-deltas.md) | 仅 DSH 环境；与通用规则冲突时以通用为准 |
 | 7 | [项目自定义内容模板](agent-collaboration-constraints-project-custom-template.md) | 项目有 custom 文件时，按六章结构执行，与通用同优先级 |
