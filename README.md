@@ -27,11 +27,11 @@
 
 ```bash
 git submodule add https://github.com/insseek/insseek-constraints-docs.git
-git -C insseek-constraints-docs checkout v2.6
+git -C insseek-constraints-docs checkout v2.7
 git add .gitmodules insseek-constraints-docs
 ```
 
-项目 `AGENTS.md` 加一行：
+项目根目录 `AGENTS.md` 写一行（没有就新建）：
 
 ```
 约束：insseek-constraints-docs/AGENTS.md
