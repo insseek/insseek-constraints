@@ -38,7 +38,7 @@ git add .gitmodules insseek-constraints-docs
 
 ```bash
 git submodule add https://github.com/insseek/insseek-constraints-docs.git
-git -C insseek-constraints-docs checkout v4.0
+git -C insseek-constraints-docs checkout v4.1
 git add .gitmodules insseek-constraints-docs
 ```
 
@@ -60,4 +60,5 @@ Agent 按入口顺序加载；人读 [人使用编码 Agent 的协作约束](hum
 · 不写机器、账户、插件、版本、阈值等环境事实；必要时引用 DSH 官方文档。
 · 命名：只适用于 DSH 的加 `dsh-`，通用的不加。
 · 新增、改名、删除文档时同步本表与 [Agent 入口](AGENTS.md) 的登记和顺序。
+· 许可证：MIT。
 ```
