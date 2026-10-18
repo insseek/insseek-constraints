@@ -38,7 +38,7 @@ git add .gitmodules insseek-constraints-docs
 
 ```bash
 git submodule add https://github.com/insseek/insseek-constraints-docs.git
-git -C insseek-constraints-docs checkout v4.8
+git -C insseek-constraints-docs checkout v1.0
 git add .gitmodules insseek-constraints-docs
 ```
 
@@ -50,7 +50,7 @@ git add .gitmodules insseek-constraints-docs
 约束：insseek-constraints-docs/AGENTS.md
 ```
 
-Agent 按入口顺序加载；人读 [人使用编码 Agent 的协作约束](human-agent-collaboration-constraints.md)。升级只改它指向的提交：`git -C insseek-constraints-docs checkout v3.x` 后提交。不复制、不改 submodule 内文件。
+Agent 按入口顺序加载；人读 [人使用编码 Agent 的协作约束](human-agent-collaboration-constraints.md)。升级只改它指向的提交：`git -C insseek-constraints-docs checkout v1.x` 后提交。不复制、不改 submodule 内文件。
 
 ## 维护
 
