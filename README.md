@@ -30,12 +30,19 @@
 ```bash
 git submodule add https://github.com/insseek/insseek-constraints-docs.git \
   constraints/insseek-constraints-docs
-git -C constraints/insseek-constraints-docs checkout v2.0   # 锁版本
+git -C constraints/insseek-constraints-docs checkout v2.1   # 锁版本
 git add .gitmodules constraints/insseek-constraints-docs
 ```
 
 - **锁版本**：submodule 指针就是版本；升级时 `git -C … checkout v2.x` 并提交指针。
-- **让 Agent 找到**：项目 `AGENTS.md` 里加一行路径，如「遵守 `constraints/insseek-constraints-docs/agent-collaboration-constraints.md`」，只放路径引用，不抄正文。
+- **让 Agent 找到**：项目 `AGENTS.md` 只放路径，不抄正文：
+
+  ```
+  约束：constraints/insseek-constraints-docs/agent-collaboration-constraints.md
+  DSH 差异：constraints/insseek-constraints-docs/dsh-agent-deltas.md
+  ```
+
+  人侧约束放项目 README / CONTRIBUTING / 团队 wiki，指向同一 submodule 里的 [人使用编码 Agent 的协作约束](human-agent-collaboration-constraints.md)。
 - **项目自定义**：需要时在项目内写 `constraints/project-custom.md`，按[项目自定义内容模板](agent-collaboration-constraints-project-custom-template.md)六章结构；不写进 submodule。
 - **只读**：不在 submodule 内改文件；改动提交到本库，项目再更新指针。
 
