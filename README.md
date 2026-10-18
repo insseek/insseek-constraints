@@ -25,30 +25,19 @@
 
 ## 在项目里使用
 
-本库只当一个只读依赖：新项目加 submodule 即可，不复制、不生成文件。
-
 ```bash
-git submodule add https://github.com/insseek/insseek-constraints-docs.git \
-  insseek-constraints-docs
-git -C insseek-constraints-docs checkout v2.5   # 锁版本
+git submodule add https://github.com/insseek/insseek-constraints-docs.git
+git -C insseek-constraints-docs checkout v2.6
 git add .gitmodules insseek-constraints-docs
 ```
 
-- **路径任意**：上面第二行的路径可换成 `docs/insseek-constraints-docs` 等，唯一要求是该目录尚不存在；推荐放项目根，路径最短。
-- **锁版本**：submodule 指针就是版本；升级时 `git -C … checkout v2.x` 并提交指针。
-- **让 Agent 找到**：项目 `AGENTS.md` 只放一行路径：
+项目 `AGENTS.md` 加一行：
 
-  ```
-  约束：insseek-constraints-docs/AGENTS.md
-  ```
+```
+约束：insseek-constraints-docs/AGENTS.md
+```
 
-  该入口登记本库全部文档并规定加载顺序，Agent 必须逐项遵守；新增文档只改本库入口，项目不用改。
-- **非 DSH 宿主**：同样是 submodule + 项目 `AGENTS.md` 指向入口；入口第 6 项标注仅 DSH。
-- **人侧**：项目 README / CONTRIBUTING / 团队 wiki 指向同一 submodule 里的 [人使用编码 Agent 的协作约束](human-agent-collaboration-constraints.md)，先读 §0 三条红线。
-- **项目自定义**：需要时在项目内写 `docs/project-constraints.md`（位置自定），按[项目自定义内容模板](agent-collaboration-constraints-project-custom-template.md)六章结构；不写进 submodule。
-- **只读**：不在 submodule 内改文件；改动提交到本库，项目再更新指针。
-
-**加载成本**：项目入口只放路径；Agent 从入口按序加载，先读「十行摘要 + 安全三条」或人侧「最低限度」，其余按需。
+Agent 按入口顺序加载；人读 [人使用编码 Agent 的协作约束](human-agent-collaboration-constraints.md)。升级只改指针：`git -C insseek-constraints-docs checkout v2.x` 后提交。不复制、不改 submodule 内文件。
 
 ## 维护
 
