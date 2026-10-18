@@ -42,6 +42,7 @@ git add .gitmodules constraints/insseek-constraints-docs
   ```
 
   该入口登记本库全部文档并规定加载顺序，Agent 必须逐项遵守；新增文档只改本库入口，项目不用改。
+- **非 DSH 宿主**：同样是 submodule + 项目 `AGENTS.md` 指向入口；入口第 6 项标注仅 DSH。
 - **人侧**：项目 README / CONTRIBUTING / 团队 wiki 指向同一 submodule 里的 [人使用编码 Agent 的协作约束](human-agent-collaboration-constraints.md)，先读 §0 三条红线。
 - **项目自定义**：需要时在项目内写 `constraints/project-custom.md`，按[项目自定义内容模板](agent-collaboration-constraints-project-custom-template.md)六章结构；不写进 submodule。
 - **只读**：不在 submodule 内改文件；改动提交到本库，项目再更新指针。
