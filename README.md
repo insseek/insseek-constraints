@@ -1,6 +1,8 @@
 # 通用约束文档库（insseek-constraints-docs）
 
-> 与具体项目无关的约束与模板。项目以 git submodule 引入本库，不复制。
+里探个人自定义的 Agent 约束，给编码 Agent 和人共用的规则库：项目以 git submodule 引入，Agent 按入口加载，人按人侧文档执行。
+
+> 与具体项目无关的约束与模板。
 >
 > **目的**：降本增效、确保安全、提高工作质量；冲突时 安全 > 质量 > 成本。
 > **边界**：不依赖具体项目、机器、账户配置、preset 或插件；机制数字不手抄。
@@ -25,11 +27,22 @@
 
 ## 在项目里使用
 
+不指定版本（固定到添加时 `main` 的提交）：
+
 ```bash
 git submodule add https://github.com/insseek/insseek-constraints-docs.git
-git -C insseek-constraints-docs checkout v2.7
 git add .gitmodules insseek-constraints-docs
 ```
+
+指定版本（推荐，日后能确知用的是哪一版）：
+
+```bash
+git submodule add https://github.com/insseek/insseek-constraints-docs.git
+git -C insseek-constraints-docs checkout v2.8
+git add .gitmodules insseek-constraints-docs
+```
+
+两种方式都会把项目锁在具体提交上，之后母库更新不会自动跟。
 
 项目根目录 `AGENTS.md` 写一行（没有就新建）：
 
