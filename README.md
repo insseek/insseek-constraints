@@ -22,7 +22,7 @@
 ## 怎么读
 
 - **人**：[人使用编码 Agent 的协作约束](human-agent-collaboration-constraints.md)（最低限度三条；任务书 / 评审模板）
-- **Agent**：从 [Agent 入口](AGENTS.md) 开始，按其顺序加载全部文档；先读「十行摘要 + 安全三条」
+- **Agent**：从 [Agent 入口](AGENTS.md) 开始，按加载规则读；先读「十行摘要 + 安全三条」
 - **项目**：按[项目自定义内容模板](agent-collaboration-constraints-project-custom-template.md)填《自定义内容》；DSH 的具体机制以官方文档为准
 
 ## 在项目里使用
@@ -38,7 +38,7 @@ git add .gitmodules insseek-constraints
 
 ```bash
 git submodule add https://github.com/insseek/insseek-constraints.git
-git -C insseek-constraints checkout v1.4
+git -C insseek-constraints checkout v1.5
 git add .gitmodules insseek-constraints
 ```
 
