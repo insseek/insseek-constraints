@@ -38,7 +38,7 @@ git add .gitmodules insseek-constraints
 
 ```bash
 git submodule add https://github.com/insseek/insseek-constraints.git
-git -C insseek-constraints checkout v1.7
+git -C insseek-constraints checkout v1.8
 git add .gitmodules insseek-constraints
 ```
 
