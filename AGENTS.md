@@ -17,13 +17,14 @@
 | 4 | [写作与审核原则](writer-constraints.md) | 写给人读的文字（文档、注释、提交信息、评审意见）时读 |
 | 5 | [道德规范](life-good-and-antifragility-constraints.md) | 人侧底线；Agent 不必读，行为受第 1 条安全条款约束 |
 | 6 | [DSH Agent 侧差异补充](dsh-agent-deltas.md) | 仅 DSH 环境；与通用规则冲突时以通用为准 |
-| 7 | [项目自定义内容模板](agent-collaboration-constraints-project-custom-template.md) | 项目有 custom 文件时，按六章结构执行，与通用同优先级 |
+| 7 | [开发流程规范](development-workflow-constraints.md) | 加功能、重构、改旧功能时读 |
+| 8 | [项目自定义内容模板](agent-collaboration-constraints-project-custom-template.md) | 项目有 custom 文件时，按六章结构执行，与通用同优先级 |
 
 加载规则：
 
 - 任务开始：读第 1 条的「十行摘要 + 安全三条」，其余按需。
-- 涉及代码：加第 3 条；涉及给人读的文字：加第 4 条。
-- DSH 环境：加第 6 条；项目有自定义内容：加第 7 条。
+- 涉及代码：加第 3、7 条；涉及给人读的文字：加第 4 条。
+- DSH 环境：加第 6 条；项目有自定义内容：加第 8 条。
 - 第 2、5 条是给人看的，Agent 不要求通读，但不得违反其中约束自己的条款。
 - 非 DSH 宿主（OpenCode、Claude Code 等）跳过第 6 条。
 - 项目 `AGENTS.md` 只需指向本文件，不抄内容。

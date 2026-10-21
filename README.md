@@ -17,6 +17,7 @@
 | [人使用编码 Agent 的协作约束](human-agent-collaboration-constraints.md) | 约束性（人） | 人怎么用 Agent：三条红线、任务书、验收、安全 / 合规 |
 | [编码 Agent 高效低成本协作约束（Agent 侧）](agent-collaboration-constraints.md) | 约束性（Agent 侧） | Agent 怎么执行：十行摘要、验证、上下文、安全治理 |
 | [DSH Agent 侧差异补充](dsh-agent-deltas.md) | 约束性（DSH 差异） | DSH 入口、机制、安全边界；通用规则见上 |
+| [开发流程规范](development-workflow-constraints.md) | 约束性（开发流程） | 加功能、重构、改旧功能的做法与验收 |
 | [项目自定义内容模板](agent-collaboration-constraints-project-custom-template.md) | 模板 | 项目自定义内容骨架；六章结构固定 |
 
 ## 怎么读
@@ -38,7 +39,7 @@ git add .gitmodules insseek-constraints
 
 ```bash
 git submodule add https://github.com/insseek/insseek-constraints.git
-git -C insseek-constraints checkout v1.11
+git -C insseek-constraints checkout v2.0
 git add .gitmodules insseek-constraints
 ```
 
