@@ -1,10 +1,12 @@
 # DeepSeek Harness Agent 侧：差异补充
 
 > **目的**：降本增效、确保安全、提高工作质量。
+>
 > **优先级**：安全（红线）> 工作质量（前提）> 成本 / 效率（目标）。
 >
 > **这是什么**：DSH 的 Agent 侧差异表。通用规则见《编码 Agent 高效低成本协作约束（Agent 侧）》；
 > 人侧见《人使用编码 Agent 的协作约束》。本文只补 DSH 的入口、机制与边界，不重复通用规则。
+>
 > **基准**：DSH 0.2.x 官方安装包与 README；企业 Agent 治理基线（NIST AI RMF / AI 600-1、
 > ISO/IEC 42001、OWASP LLM Top 10 / Agentic AI、SLSA / OpenSSF）。
 > 具体数字（窗口、阈值、版本、工具清单）以本会话实际安装与官方文档为准，不在此手抄。

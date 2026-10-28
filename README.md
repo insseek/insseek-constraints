@@ -5,7 +5,9 @@
 > 与具体项目无关的约束与模板。
 >
 > **目的**：降本增效、确保安全、提高工作质量；冲突时 安全 > 质量 > 成本。
+>
 > **边界**：不绑定任何项目、机器、账户、配置或插件；不照抄会随版本变化的数字。
+>
 > 文件名以 `dsh-` 开头的只适用于 DSH，其余适用于任何编码 Agent。
 
 ## 文档
@@ -39,7 +41,7 @@ git add .gitmodules insseek-constraints
 
 ```bash
 git submodule add https://github.com/insseek/insseek-constraints.git
-git -C insseek-constraints checkout v3.5
+git -C insseek-constraints checkout v3.6
 git add .gitmodules insseek-constraints
 ```
 
